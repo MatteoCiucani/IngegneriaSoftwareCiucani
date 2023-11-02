@@ -10,7 +10,7 @@ public class FlightData {
     private Map<String, Flight> flightMap = new HashMap<>();
     private Map<String, List<Reservation>> reservationsMap = new HashMap();
 
-
+    private Map<String, Double> flightFares = new HashMap<>();
     private static FlightData instance = null;
 
     private FlightData() {
@@ -41,6 +41,18 @@ public class FlightData {
         reservationsMap.put(flightCode, reservations);
     }
 
+    // Imposta una tariffa per un volo specifico
+    public void setFareForFlight(String flightCode, double fare) {
+        flightFares.put(flightCode, fare);
+    }
+
+    // Ottieni la tariffa di un volo specifico
+    public double getFareForFlight(String flightCode) {
+        if (flightFares.containsKey(flightCode)) {
+            return flightFares.get(flightCode);
+        }
+        return 0.0; // Tariffa non trovata
+    }
 
 
     public List<Flight> getFlightsSortedByDepartureTime() {

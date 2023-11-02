@@ -23,6 +23,18 @@ public class IngegneriaSoftwareCiucani {
         flightData.addFlight("F102", "B456", "LAX", "JFK", "14:00");
         flightData.addFlight("F103", "A123", "SFO", "ORD", "08:00");
 
+        flightData.setFareForFlight("F101", 200.0);
+        flightData.setFareForFlight("F102", 250.0);
+        flightData.setFareForFlight("F103", 180.0);
+
+        // Ottieni la tariffa di un volo specifico
+        double fareForF101 = flightData.getFareForFlight("F101");
+        double fareForF102 = flightData.getFareForFlight("F102");
+        double fareForF103 = flightData.getFareForFlight("F103");
+
+        System.out.println("Fare for F101: $" + fareForF101);
+        System.out.println("Fare for F102: $" + fareForF102);
+        System.out.println("Fare for F103: $" + fareForF103);
 
 
         List<Flight> flights = flightData.getFlightsSortedByDepartureTime();
