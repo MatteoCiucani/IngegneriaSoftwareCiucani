@@ -38,11 +38,6 @@ public class FlightData {
         Flight flight = new Flight(flightCode, aircraft, departureAirport, arrivalAirport, departureTime, totalSeats);
         flightMap.put(flightCode, flight);
         List<Reservation> reservations = new ArrayList<>();
-        for (int day = 1; day <= 7; day++) {
-            Passenger passenger = new Passenger(day, "PassengerName" + day);
-            Reservation reservation = new Reservation(flight, passenger, day);
-            reservations.add(reservation);
-        }
         reservationsMap.put(flightCode, reservations);
     }
 

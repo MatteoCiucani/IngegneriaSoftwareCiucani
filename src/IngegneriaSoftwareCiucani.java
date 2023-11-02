@@ -10,11 +10,11 @@ public class IngegneriaSoftwareCiucani {
         Passenger passenger2 = new Passenger(2, "Bob");
         Passenger passenger3 = new Passenger(3, "Marco");
         Passenger passenger4 = new Passenger(4, "Matteo");
-        Passenger passenger5 = new Passenger(5, "Matteo");
-        Passenger passenger6 = new Passenger(6, "Matteo");
-        Passenger passenger7 = new Passenger(7, "Matteo");
-        Passenger passenger8 = new Passenger(8, "Matteo");
-        Passenger passenger9 = new Passenger(9, "Matteo");
+        Passenger passenger5 = new Passenger(5, "Massimo");
+        Passenger passenger6 = new Passenger(6, "Elia");
+        Passenger passenger7 = new Passenger(7, "Lorenzo");
+        Passenger passenger8 = new Passenger(8, "Jon");
+        Passenger passenger9 = new Passenger(9, "Ginevra");
 
         flightData.addAircraft("A123", "Boeing 737", 150);
         flightData.addAircraft("B456", "Airbus A320", 120);
@@ -40,6 +40,7 @@ public class IngegneriaSoftwareCiucani {
         passenger6.makeReservation(flights.get(0), 6);
         passenger7.makeReservation(flights.get(1), 3);
         passenger8.makeReservation(flights.get(0), 4);
+        passenger9.makeReservation(flights.get(1), 1);
 
 
         Flight flightF101 = flightData.getFlightByCode("F101");
